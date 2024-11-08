@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pjGestionEmpleados.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,18 @@ namespace pjGestionEmpleados.Presentacion
             InitializeComponent();
         }
 
-     
+        #region "Metodos"
+
+        private void CargarEmpleados (string cBusqueda)
+        {
+            D_Empleados Datos = new D_Empleados();
+            dgvLista.DataSource = Datos.Listar_Empleados(cBusqueda);
+        }
+        #endregion
+
+        private void frmEmpleado_Load(object sender, EventArgs e)
+        {
+            CargarEmpleados("%");
+        }
     }
 }
