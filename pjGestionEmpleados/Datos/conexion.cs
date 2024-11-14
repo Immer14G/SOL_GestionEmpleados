@@ -12,7 +12,7 @@ namespace pjGestionEmpleados.Datos
         // Constructor de la clase 
         private Conexion()
         {
-            this.Servidor = "DESKTOP-RTREKKS\\SQLEXPRESS";
+            this.Servidor = "IMMER\\SQLEXPRESS";
             this.Base = "bd_gestion_empleados";
         }
 
